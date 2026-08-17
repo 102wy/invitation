@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Continuous";
+  src: url("../assets/fonts/continuous.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gallery-regular";
+  src: url("../assets/fonts/gallery.regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "MaruBuri";
+  src: url("../assets/fonts/MaruBuri-Light.ttf") format("truetype");
+  font-style: light;
+}
+@font-face {
+  font-family: "MaruBuri";
+  src: url("../assets/fonts/MaruBuri-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Verandah";
+  src: url("../assets/fonts/Verandah.otf") format("truetype");
+  font-style: normal;
+}
