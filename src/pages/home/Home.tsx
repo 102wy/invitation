@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./Home.style";
 
 import MAIN_IMG from "../../assets/images/IMG_4505.jpg";

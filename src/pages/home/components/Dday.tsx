@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import * as S from "./Dday.style";
-import FloatingHearts from "../../../components/ui/FloatingHearts";
 
 dayjs.extend(duration);
 

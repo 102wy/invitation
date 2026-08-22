@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import * as S from "./Layout.style";
 
 export default function Layout({ children }: PropsWithChildren) {

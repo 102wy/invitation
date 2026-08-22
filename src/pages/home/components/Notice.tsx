@@ -1,7 +1,5 @@
-import React from "react";
 import MainTitle from "../../../components/ui/MainTitle";
 import * as S from "./Notice.style";
-import Line from "../../../components/ui/Line";
 
 const Notice = () => {
   return (

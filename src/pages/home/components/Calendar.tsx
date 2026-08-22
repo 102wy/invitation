@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import dayjs from "dayjs";
 import * as S from "./Calendar.style";
 import Line from "../../../components/ui/Line";
-import FloatingHearts from "../../../components/ui/FloatingHearts";
 
 const Calendar = () => {
   // 2026년 11월 1일 기준 설정
-  const [currentDate, setCurrentDate] = useState(dayjs("2026-11-01"));
+  const [currentDate] = useState(dayjs("2026-11-01"));
 
   const startOfMonth = currentDate.startOf("month");
   const endOfMonth = currentDate.endOf("month");
 
-  const startDayOfWeek = startOfMonth.day(); // 11월 1일의 요일 (0: 일요일, ~ 6: 토요일)
   const daysInMonth = currentDate.daysInMonth(); // 11월의 총 일수 (30일)
 
   // 달력 그리드 배열 생성

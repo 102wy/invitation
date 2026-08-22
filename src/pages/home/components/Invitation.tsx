@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import * as S from "./Invitation.style";
 import Line from "../../../components/ui/Line";
@@ -9,12 +9,9 @@ const Invitation = () => {
   const [confettiCount, setConfettiCount] = useState(0);
   const confettiPointRef = useRef<HTMLDivElement>(null);
   const hasFiredRef = useRef(false);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-
       if (!hasFiredRef.current && confettiPointRef.current) {
         const rect = confettiPointRef.current.getBoundingClientRect();
         if (rect.top < window.innerHeight * 0.7) {

@@ -1,7 +1,4 @@
-import React from "react";
-
 import * as S from "./Location.style";
-import Line from "../../../components/ui/Line";
 import MainTitle from "../../../components/ui/MainTitle";
 import YLine from "../../../components/ui/YLine";
 

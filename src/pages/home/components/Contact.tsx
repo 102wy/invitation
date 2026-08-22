@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as S from "./Contact.style";
 import MainTitle from "../../../components/ui/MainTitle";
 import { MessageIcon, PhonIcon } from "../../../components/ui/Icon";

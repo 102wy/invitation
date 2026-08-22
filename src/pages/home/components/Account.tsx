@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as S from "./Account.style";
 import MainTitle from "../../../components/ui/MainTitle";
 import { CopyIcon, DownArrowIcon } from "../../../components/ui/Icon";
@@ -12,7 +12,7 @@ const Account = () => {
 
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async (value) => {
+  const handleCopy = async (value: string) => {
     try {
       await navigator.clipboard.writeText(value);
 

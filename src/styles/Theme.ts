@@ -49,3 +49,5 @@ export const theme = {
     mobileWidth: "420px",
   },
 };
+
+export type Theme = typeof theme;
