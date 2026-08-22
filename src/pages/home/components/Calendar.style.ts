@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const Wrap = styled.div`
   text-align: center;
-  padding: 40px;
-  padding-bottom: 0;
+  padding: 60px 40px;
+  /* padding-bottom: 0; */
+
   .title {
     letter-spacing: 1.3px;
     margin-bottom: 5px;
+    font-size: 12px;
+    color: ${({ theme }) => theme.color.main};
   }
   .title_date {
     font-size: 14px;

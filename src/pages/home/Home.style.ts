@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const Wrap = styled.div`
   position: relative;
+
+  .heart_wrapper {
+    position: relative;
+    overflow: hidden;
+  }
 `;
 
 export const Section = styled.section`

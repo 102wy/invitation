@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import dayjs from "dayjs";
 import * as S from "./Calendar.style";
 import Line from "../../../components/ui/Line";
+import FloatingHearts from "../../../components/ui/FloatingHearts";
 
 const Calendar = () => {
   // 2026년 11월 1일 기준 설정
@@ -39,6 +40,7 @@ const Calendar = () => {
     <S.Wrap>
       <p className="title">WEDDING DAY</p>
       <p className="title_date">2026년 11월 1일 일요일 오전 11시</p>
+      {/* <MainTitle en="WEDDING DAY" ko="2026년 11월 1일 일요일 오전 11시" /> */}
       <div className="line" />
       <Line />
       {/* 달력 */}

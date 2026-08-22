@@ -13,13 +13,13 @@ export const Wrap = styled.div`
     margin: 30px auto;
   }
 
-  .font_main {
-    &.en {
-      font-size: 12px;
-    }
-    &.ko {
-      font-size: 16px;
-    }
+  .font_color {
+    color: ${({ theme }) => theme.color.mutedForeground};
+  }
+  .ko {
+    font-size: 16px;
+    color: ${({ theme }) => theme.color.secondary};
+    line-height: 1.8;
   }
 
   .family {

@@ -119,13 +119,7 @@ const ScrollConfetti = ({ trigger }: { trigger: number }) => {
     // Don't cancel animation on cleanup - let it finish naturally
   }, [trigger, createBurst]);
 
-  return (
-    <Canvas
-      ref={canvasRef}
-      className=""
-      style={{ width: "100vw", height: "100vh" }}
-    />
-  );
+  return <Canvas ref={canvasRef} />;
 };
 
 export default ScrollConfetti;
@@ -138,4 +132,6 @@ const Canvas = styled.canvas`
   bottom: 0;
   left: 0;
   z-index: 50;
+  width: 100vw;
+  height: 100vh;
 `;

@@ -34,9 +34,15 @@ const GlobalStyle = createGlobalStyle`
         text-decoration:none;
     }
 
-    button{
-        font:inherit;
-        cursor:pointer;
+    button {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
     }
 
     .font_main {

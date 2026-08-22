@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  padding: 10px 40px;
+  padding: 0px 40px 30px 40px;
 `;
 
 export const CountDown = styled.ul`
@@ -17,7 +17,8 @@ export const CountDown = styled.ul`
 
     padding: 12px 17px;
     border-radius: 10px;
-    border: 1px solid ${({ theme }) => theme.color.main};
+    border: 1px solid ${({ theme }) => theme.color.border};
+    color: ${({ theme }) => theme.color.main};
     width: 20%;
 
     p {
@@ -34,4 +35,9 @@ export const CountDown = styled.ul`
 export const LeftCount = styled.div`
   text-align: center;
   font-size: 13px;
+  padding: 10px;
+  color: ${({ theme }) => theme.color.secondary};
+  span {
+    color: ${({ theme }) => theme.color.red};
+  }
 `;

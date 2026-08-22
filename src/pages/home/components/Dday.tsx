@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import * as S from "./Dday.style";
+import FloatingHearts from "../../../components/ui/FloatingHearts";
 
 dayjs.extend(duration);
 
@@ -31,7 +32,9 @@ const Dday = () => {
 
   return (
     <S.Wrap>
-      <S.LeftCount>태형 🤍 원영 결혼식 까지</S.LeftCount>
+      <S.LeftCount>
+        태형 <span>♥</span> 원영 결혼식 까지
+      </S.LeftCount>
       <S.CountDown>
         <li>
           <p>{days}</p>

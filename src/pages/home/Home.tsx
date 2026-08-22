@@ -1,9 +1,7 @@
+import React from "react";
 import * as S from "./Home.style";
 
 import MAIN_IMG from "../../assets/images/IMG_4505.jpg";
-import ScrollConfetti from "../../components/ui/ScrollConfetti";
-import { useEffect, useState } from "react";
-import Introduce from "./components/Introduce";
 import Invitation from "./components/Invitation";
 import Calendar from "./components/Calendar";
 import Dday from "./components/Dday";
@@ -11,35 +9,15 @@ import Gallery from "./components/Gallery";
 import Location from "./components/Location";
 import Notice from "./components/Notice";
 import Account from "./components/Account";
+import Contact from "./components/Contact";
+import Bottom from "./components/Bottom";
+import FloatingHearts from "../../components/ui/FloatingHearts";
 
 export default function Home() {
-  const [confettiCount, setConfettiCount] = useState(0);
-
-  const handleImageLoad = () => {
-    setTimeout(() => {
-      setConfettiCount((c) => c + 1);
-    }, 100);
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (rect.top < window.innerHeight) {
-        hasFiredRef.current = true;
-
-        setTimeout(() => {
-          setConfettiCount((c) => c + 1);
-        }, 500);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <S.Wrap>
       <S.ImageWrapper>
-        <S.Image src={MAIN_IMG} alt="" onLoad={handleImageLoad} />
+        <S.Image src={MAIN_IMG} alt="" />
         <div className="top_wrapper">We're getting Married</div>
         <div className="bottom_wrapper">
           <div className="bottom_wrap">
@@ -60,18 +38,20 @@ export default function Home() {
             </p>
           </div>
         </div>
-
-        <ScrollConfetti trigger={confettiCount} />
       </S.ImageWrapper>
       {/* 초대합니다 */}
       <Invitation />
       {/* 연락하기 */}
+      <Contact />
       {/* 신랑신부 소개 */}
       {/* <Introduce /> */}
-      {/* 캘린더 */}
-      <Calendar />
-      {/* D-day */}
-      <Dday />
+      <div className="heart_wrapper">
+        {/* 캘린더 */}
+        <Calendar />
+        {/* D-day */}
+        <Dday />
+        <FloatingHearts />
+      </div>
       {/* 갤러리 */}
       <Gallery />
       {/* 오시는길 */}
@@ -80,6 +60,8 @@ export default function Home() {
       <Notice />
       {/* 마음 전하실 곳 */}
       <Account />
+      {/* 마무리 */}
+      <Bottom />
     </S.Wrap>
   );
 }
