@@ -1,5 +1,3 @@
-import React from "react";
-
 const Introduce = () => {
   return <div>신랑신부 소개</div>;
 };
