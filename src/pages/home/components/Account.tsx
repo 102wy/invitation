@@ -18,7 +18,7 @@ const Account = () => {
     bride3: false,
   });
 
-  const handleCopy = async (value: string, key) => {
+  const handleCopy = async (value: string, key: string) => {
     try {
       await navigator.clipboard.writeText(value);
 
@@ -51,9 +51,7 @@ const Account = () => {
       <Line />
       <div
         className="content_wrapper"
-        onClick={() =>
-          setIsShowValues((prev) => ({ ...prev, groom: !prev.groom }))
-        }
+        onClick={() => setIsShowValues((prev) => ({ ...prev, groom: !prev.groom }))}
       >
         <div className="content_title">
           <p>신랑 측 계좌번호</p>
@@ -91,9 +89,7 @@ const Account = () => {
       {/* 신부 */}
       <div
         className="content_wrapper"
-        onClick={() =>
-          setIsShowValues((prev) => ({ ...prev, bride: !prev.bride }))
-        }
+        onClick={() => setIsShowValues((prev) => ({ ...prev, bride: !prev.bride }))}
       >
         <div className="content_title">
           <p>신부 측 계좌번호</p>
