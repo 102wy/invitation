@@ -32,6 +32,7 @@ export const Wrap = styled.div`
     }
     .name {
       font-size: 16px;
+      letter-spacing: 0.3px;
     }
   }
 `;
