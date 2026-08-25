@@ -130,3 +130,69 @@ export const DownArrowIcon = () => {
     </svg>
   );
 };
+
+export const SubwayIcon = () => {
+  return (
+    <svg
+      fill="#43331c"
+      width="16px"
+      height="16px"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path d="M5,20.816V21.5a1.5,1.5,0,0,0,3,0V21h8v.5a1.5,1.5,0,0,0,3,0v-.684A3,3,0,0,0,21,18V4a3,3,0,0,0-3-3H6A3,3,0,0,0,3,4V18A3,3,0,0,0,5,20.816ZM5,4A1,1,0,0,1,6,3H18a1,1,0,0,1,1,1V5H5ZM5,7H19v6H5Zm0,8H19v3a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1Zm1,2a1,1,0,1,1,1,1A1,1,0,0,1,6,17Zm10,0a1,1,0,1,1,1,1A1,1,0,0,1,16,17Z"></path>
+      </g>
+    </svg>
+  );
+};
+
+export const BusIcon = () => {
+  return (
+    <svg
+      fill="#43331c"
+      width="16px"
+      height="16px"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path d="M20,3H4A3,3,0,0,0,1,6V16a2,2,0,0,0,2,2h.142a3.981,3.981,0,0,0,7.716,0h2.284a3.981,3.981,0,0,0,7.716,0H21a2,2,0,0,0,2-2V6A3,3,0,0,0,20,3ZM3,6A1,1,0,0,1,4,5h9V9H3ZM7,19a2,2,0,1,1,2-2A2,2,0,0,1,7,19Zm10,0a2,2,0,1,1,2-2A2,2,0,0,1,17,19Zm4-3h-.142a3.981,3.981,0,0,0-7.716,0H10.858a3.981,3.981,0,0,0-7.716,0H3V11H21Zm0-7H15V5h5a1,1,0,0,1,1,1Z"></path>
+      </g>
+    </svg>
+  );
+};
+
+export const ParkingIcon = () => {
+  return (
+    <svg
+      fill="#43331c"
+      width="16px"
+      height="16px"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path d="M5,22H19a3,3,0,0,0,3-3V5a3,3,0,0,0-3-3H5A3,3,0,0,0,2,5V19A3,3,0,0,0,5,22ZM4,5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1V19a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1ZM9,18a1,1,0,0,0,1-1V14h2a4,4,0,0,0,0-8H9A1,1,0,0,0,8,7V17A1,1,0,0,0,9,18ZM10,8h2a2,2,0,0,1,0,4H10Z"></path>
+      </g>
+    </svg>
+  );
+};

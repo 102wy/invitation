@@ -26,7 +26,7 @@ export const Wrap = styled.div`
     }
   }
   .desc {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
   }
 `;

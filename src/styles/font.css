@@ -23,3 +23,9 @@
   src: url("../assets/fonts/Verandah.otf") format("truetype");
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Blacksword";
+  src: url("../assets/fonts/Blacksword.otf") format("truetype");
+  font-style: normal;
+}

@@ -11,13 +11,21 @@ import Account from "./components/Account";
 import Contact from "./components/Contact";
 import Bottom from "./components/Bottom";
 import FloatingHearts from "../../components/ui/FloatingHearts";
+import ConfettiBackground from "../../components/ui/ConfettiBackground";
+import WeddingText from "@/components/ui/WeddingText";
 
 export default function Home() {
   return (
     <S.Wrap>
       <S.ImageWrapper>
         <S.Image src={MAIN_IMG} alt="" />
-        <div className="top_wrapper">We're getting Married</div>
+        <ConfettiBackground />
+        {/* <div className="top_wrapper">We're getting Married</div> */}
+
+        <S.HandWriting>
+          <WeddingText />
+        </S.HandWriting>
+
         <div className="bottom_wrapper">
           <div className="bottom_wrap">
             <span>TAEHYUNG</span>
@@ -27,13 +35,10 @@ export default function Home() {
             <span>WONYOUNG</span>
           </div>
           <div className="desc">
+            <p>That is the true season of love, when we believe that we alone can love,</p>
             <p>
-              That is the true season of love, when we believe that we alone can
-              love,
-            </p>
-            <p>
-              that no one could ever have loved so before us, and that no one
-              will love in the same way after us.
+              npm install opentype.js that no one could ever have loved so before us, and that no
+              one will love in the same way after us.
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import * as S from "./Location.style";
 import MainTitle from "../../../components/ui/MainTitle";
 import YLine from "../../../components/ui/YLine";
+import { BusIcon, ParkingIcon, SubwayIcon } from "../../../components/ui/Icon";
 
 const Location = () => {
   return (
@@ -22,7 +23,9 @@ const Location = () => {
       <ul className="info">
         <li>
           <div className="title">
-            <button></button>
+            <button>
+              <ParkingIcon />
+            </button>
             <p>주차안내</p>
           </div>
           <div className="content">
@@ -32,7 +35,9 @@ const Location = () => {
         </li>
         <li>
           <div className="title">
-            <button></button>
+            <button>
+              <BusIcon />
+            </button>
             <p>버스</p>
           </div>
           <div className="content">
@@ -50,7 +55,9 @@ const Location = () => {
         </li>
         <li>
           <div className="title">
-            <button></button>
+            <button>
+              <SubwayIcon />
+            </button>
             <p>지하철</p>
           </div>
           <div className="content">
