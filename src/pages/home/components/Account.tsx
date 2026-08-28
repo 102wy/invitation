@@ -114,7 +114,7 @@ const Account = () => {
           <li>
             <div className="info">
               <p className="title">신부 아버지 김홍덕</p>
-              <p className="name">농협은행 </p>
+              <p className="name">농협은행 352-0336-0306-23</p>
             </div>
             <button onClick={() => handleCopy("352-0336-0306-23", "bride2")}>
               <CopyIcon />
@@ -124,7 +124,7 @@ const Account = () => {
           <li>
             <div className="info">
               <p className="title">신부 어머니 김미도</p>
-              <p className="name">국민은행 </p>
+              <p className="name">기업은행 162-076139-02-010</p>
             </div>
             <button onClick={() => handleCopy("91991123059", "bride3")}>
               <CopyIcon />

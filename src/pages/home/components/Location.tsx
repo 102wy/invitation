@@ -2,8 +2,50 @@ import * as S from "./Location.style";
 import MainTitle from "../../../components/ui/MainTitle";
 import YLine from "../../../components/ui/YLine";
 import { BusIcon, ParkingIcon, SubwayIcon } from "../../../components/ui/Icon";
+import { useEffect } from "react";
+
+import LOCATION_ICON from "@/assets/images/heart-marker.png";
 
 const Location = () => {
+  useEffect(() => {
+    const kakao = window.kakao;
+    const container = document.getElementById("map");
+
+    if (!container) return;
+
+    const position = new kakao.maps.LatLng(35.8823602975974, 128.662019053984);
+
+    const map = new kakao.maps.Map(container, {
+      center: position,
+      level: 3,
+    });
+
+    const markerImage = new kakao.maps.MarkerImage(LOCATION_ICON, new kakao.maps.Size(50, 50), {
+      offset: new kakao.maps.Point(25, 50),
+    });
+
+    const marker = new kakao.maps.Marker({
+      position,
+      image: markerImage,
+    });
+
+    marker.setMap(map);
+
+    // ⭐ 마커가 DOM에 그려질 때까지 기다림
+    setTimeout(() => {
+      const markerElements = container.querySelectorAll('img[src*="heart-marker"]');
+
+      console.log("마커 개수:", markerElements.length);
+
+      markerElements.forEach((element) => {
+        const img = element as HTMLImageElement;
+
+        img.style.animation = "locationBounce 1.2s ease-in-out infinite";
+        img.style.transformOrigin = "bottom center";
+      });
+    }, 100);
+  }, []);
+
   return (
     <S.Wrap>
       <MainTitle en="LOCATION" ko="오시는 길" />
@@ -12,7 +54,7 @@ const Location = () => {
       <p className="subtitle">대구 동구 동촌로 200</p>
 
       {/* 지도영역 */}
-      <div className="map">여기에 지도를 넣을겁니다</div>
+      <div id="map" className="map"></div>
       {/* <ul className="button_wrap">
         <li>네이버지도</li>
         <li>티맵</li>
@@ -65,8 +107,7 @@ const Location = () => {
             <p>
               [대경선 이용시]
               <br />
-              구미역 또는 경산역 {">"} 동대구역 1호선 환승 {">"}{" "}
-              해안역(퀸벨호텔)
+              구미역 또는 경산역 {">"} 동대구역 1호선 환승 {">"} 해안역(퀸벨호텔)
             </p>
           </div>
         </li>
