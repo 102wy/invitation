@@ -1,6 +1,6 @@
 import * as S from "./Home.style";
 
-import MAIN_IMG from "../../assets/images/IMG_4505.jpg";
+import MAIN_IMG from "../../assets/images/Gallery/IMG_4505.jpg";
 import Invitation from "./components/Invitation";
 import Calendar from "./components/Calendar";
 import Dday from "./components/Dday";
