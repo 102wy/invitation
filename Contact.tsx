@@ -44,10 +44,7 @@ const Contact = () => {
           </svg>
         </S.Arrow>
       </div>
-      <ul
-        onClick={(e) => e.stopPropagation()}
-        className={`content ${isShowValues.groom ? "open" : ""}`}
-      >
+      <ul className={`content ${isShowValues.groom ? "open" : ""}`}>
         <li>
           <div className="info">
             <p className="title">신랑</p>
