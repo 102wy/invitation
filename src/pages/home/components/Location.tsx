@@ -2,11 +2,13 @@ import * as S from "./Location.style";
 import MainTitle from "../../../components/ui/MainTitle";
 import YLine from "../../../components/ui/YLine";
 import { BusIcon, ParkingIcon, SubwayIcon } from "../../../components/ui/Icon";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import LOCATION_ICON from "@/assets/images/heart-marker.png";
 
 const Location = () => {
+  const mapRef = useRef<any>(null);
+
   useEffect(() => {
     const kakao = window.kakao;
     const container = document.getElementById("map");
@@ -19,6 +21,8 @@ const Location = () => {
       center: position,
       level: 3,
     });
+
+    mapRef.current = map;
 
     const markerImage = new kakao.maps.MarkerImage(LOCATION_ICON, new kakao.maps.Size(50, 50), {
       offset: new kakao.maps.Point(25, 50),
@@ -35,8 +39,6 @@ const Location = () => {
     setTimeout(() => {
       const markerElements = container.querySelectorAll('img[src*="heart-marker"]');
 
-      console.log("마커 개수:", markerElements.length);
-
       markerElements.forEach((element) => {
         const img = element as HTMLImageElement;
 
@@ -44,7 +46,26 @@ const Location = () => {
         img.style.transformOrigin = "bottom center";
       });
     }, 100);
+    return () => {
+      mapRef.current = null;
+    };
   }, []);
+
+  // 확대
+
+  const zoomIn = () => {
+    if (!mapRef.current) return;
+
+    mapRef.current.setLevel(mapRef.current.getLevel() - 1);
+  };
+
+  // 축소
+
+  const zoomOut = () => {
+    if (!mapRef.current) return;
+
+    mapRef.current.setLevel(mapRef.current.getLevel() + 1);
+  };
 
   return (
     <S.Wrap>
@@ -53,8 +74,26 @@ const Location = () => {
       <p className="title">퀸벨호텔 1F 브리에가든</p>
       <p className="subtitle">대구 동구 동촌로 200</p>
 
-      {/* 지도영역 */}
-      <div id="map" className="map"></div>
+      <div className="map_wrap">
+        {/* 지도영역 */}
+        <div id="map" className="map"></div>
+        <div className="custom_zoomcontrol radius_border">
+          <span onClick={zoomIn}>
+            <img
+              src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
+              alt="확대"
+            />
+          </span>
+
+          <span onClick={zoomOut}>
+            <img
+              src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
+              alt="축소"
+            />
+          </span>
+        </div>
+      </div>
+
       {/* <ul className="button_wrap">
         <li>네이버지도</li>
         <li>티맵</li>
