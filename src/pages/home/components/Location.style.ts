@@ -15,6 +15,53 @@ export const Wrap = styled.div`
     height: 50px;
   }
 
+  .map_wrap {
+    position: relative;
+  }
+
+  .map {
+    position: relative;
+  }
+
+  .custom_zoomcontrol {
+    position: absolute !important;
+    right: 10px !important;
+    top: 10px !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    flex-direction: column;
+    width: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .custom_zoomcontrol span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+    background: #fff;
+  }
+
+  .custom_zoomcontrol span + span {
+    border-top: 1px solid #ddd;
+  }
+
+  .custom_zoomcontrol span:hover {
+    background: #f5f5f5;
+  }
+
+  .custom_zoomcontrol img {
+    width: 15px;
+    height: 15px;
+  }
+
   @keyframes locationBounce {
     0% {
       transform: translateY(0);
