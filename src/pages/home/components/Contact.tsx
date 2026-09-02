@@ -13,9 +13,6 @@ const Contact = () => {
     <S.Wrap>
       <MainTitle en="CONTACT" ko="연락하기" />
       {/* 신랑 */}
-      <a href="tel:+821031823893" aria-label="신랑에게 전화하기">
-        테스트
-      </a>
       <div
         className="content_wrapper"
         onClick={() => setIsShowValues((prev) => ({ ...prev, groom: !prev.groom }))}
