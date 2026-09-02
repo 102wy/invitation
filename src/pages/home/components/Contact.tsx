@@ -44,49 +44,43 @@ const Contact = () => {
               </g>
             </svg>
           </S.Arrow>
-          <ul className={`content ${isShowValues.groom ? "open" : ""}`}>
-            <li>
-              <div className="info">
-                <p className="title">신랑</p>
-                <p className="name">김태형</p>
-              </div>
-              <div className="contact">
-                <a
-                  href="tel:+821031823893"
-                  aria-label="신랑에게 전화하기"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                  }}
-                >
-                  <PhonIcon />
-                </a>
-                <a
-                  href="sms:010-3182-3893"
-                  aria-label="신랑에게 문자 보내기"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                  }}
-                >
-                  <MessageIcon />
-                </a>
-              </div>
-            </li>
-            <li>
-              <div className="info">
-                <p className="title">신랑 어머니</p>
-                <p className="name">이영순</p>
-              </div>
-              <div className="contact">
-                <a href="tel:01090403893" aria-label="신랑 어머니에게 전화하기">
-                  <PhonIcon />
-                </a>
-                <a href="sms:01090403893" aria-label="신랑 어머니에게 문자 보내기">
-                  <MessageIcon />
-                </a>
-              </div>
-            </li>
-          </ul>
         </div>
+        <ul className={`content ${isShowValues.groom ? "open" : ""}`}>
+          <li>
+            <div className="info">
+              <p className="title">신랑</p>
+              <p className="name">김태형</p>
+            </div>
+            <div className="contact">
+              <a href="tel:01031823893">
+                <PhonIcon />
+              </a>
+              <a
+                href="sms:01031823893"
+                aria-label="신랑에게 문자 보내기"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
+                <MessageIcon />
+              </a>
+            </div>
+          </li>
+          <li>
+            <div className="info">
+              <p className="title">신랑 어머니</p>
+              <p className="name">이영순</p>
+            </div>
+            <div className="contact">
+              <a href="tel:01090403893" aria-label="신랑 어머니에게 전화하기">
+                <PhonIcon />
+              </a>
+              <a href="sms:01090403893" aria-label="신랑 어머니에게 문자 보내기">
+                <MessageIcon />
+              </a>
+            </div>
+          </li>
+        </ul>
       </div>
 
       {/* 신부 */}
@@ -129,11 +123,11 @@ const Contact = () => {
               <p className="name">김원영</p>
             </div>
             <div className="contact">
-              <a href="tel:+82-10-5393-0218" aria-label="신부에게 전화하기">
+              <a href="tel:01053930218" aria-label="신부에게 전화하기">
                 <PhonIcon />
               </a>
               <a
-                href="sms:010-5393-0218"
+                href="sms:01053930218"
                 aria-label="신부에게 문자 보내기"
                 onClick={(e) => {
                   e.preventDefault();
