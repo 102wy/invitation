@@ -90,7 +90,9 @@ const Account = () => {
           <li>
             <div className="info">
               <p className="title">신랑 김태형</p>
-              <p className="name">국민은행 91991123059</p>
+              <p className="name">
+                <span>국민은행</span> 91991123059
+              </p>
             </div>
             <button type="button" onClick={() => handleCopy("91991123059", "groom1")}>
               <CopyIcon />
@@ -100,7 +102,9 @@ const Account = () => {
           <li>
             <div className="info">
               <p className="title">신랑 어머니 이영순</p>
-              <p className="name">iM뱅크(구 대구은행) 185-08-114667</p>
+              <p className="name">
+                <span>iM뱅크(구 대구은행)</span> 185-08-114667
+              </p>
             </div>
             <button type="button" onClick={() => handleCopy("185-08-114667", "groom2")}>
               <CopyIcon />
@@ -128,7 +132,9 @@ const Account = () => {
           <li>
             <div className="info">
               <p className="title">신부 김원영</p>
-              <p className="name">국민은행 599701-04-278607</p>
+              <p className="name">
+                <span>국민은행</span> 599701-04-278607
+              </p>
             </div>
             <button type="button" onClick={() => handleCopy("599701-04-278607", "bride1")}>
               <CopyIcon />
@@ -138,7 +144,9 @@ const Account = () => {
           <li>
             <div className="info">
               <p className="title">신부 아버지 김홍덕</p>
-              <p className="name">농협은행 352-0336-0306-23</p>
+              <p className="name">
+                <span>농협은행</span> 352-0336-0306-23
+              </p>
             </div>
             <button type="button" onClick={() => handleCopy("352-0336-0306-23", "bride2")}>
               <CopyIcon />
@@ -148,7 +156,9 @@ const Account = () => {
           <li>
             <div className="info">
               <p className="title">신부 어머니 김미도</p>
-              <p className="name">기업은행 162-076139-02-010</p>
+              <p className="name">
+                <span>기업은행</span> 162-076139-02-010
+              </p>
             </div>
             <button type="button" onClick={() => handleCopy("162-076139-02-010", "bride3")}>
               <CopyIcon />

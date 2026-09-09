@@ -59,6 +59,12 @@ export const Wrap = styled.div`
         }
         .name {
           font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          span {
+            font-size: 12px;
+          }
         }
       }
       button {

@@ -13,18 +13,31 @@ const Notice = () => {
       <div className="img_wrap">
         <div className="content">
           <img src={FRAME1} alt="" />
-          <p>신랑·신부 프레임</p>
+          <div className="desc_wrap">
+            <p>
+              <span>신랑측 프레임 선택시</span>
+            </p>
+            <p>신랑·신부 프레임</p>
+          </div>
         </div>
         <div className="content">
           <img src={FRAME2} alt="" />
-          <p>후추·먼지 프레임</p>
+          <div className="desc_wrap">
+            <p>
+              <span>신부측 프레임 선택시</span>
+            </p>
+            <p>후추·먼지 프레임</p>
+          </div>
         </div>
       </div>
       <p className="desc">
         로비에 포토부스가 마련되어 있습니다.
         <br />두 가지 프레임이 준비되어 있으니
         <br />
-        모두 이용해 보시고 소중한 추억을 남겨 주세요<span className="heart">♥</span>
+        횟수 제한 없이 마음껏 이용해 보시고
+        <br />
+        소중한 추억을 남겨 주세요
+        <span className="heart">♥</span>
       </p>
     </S.Wrap>
   );

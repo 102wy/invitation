@@ -13,9 +13,18 @@ export const Wrap = styled.div`
   .img_wrap {
     display: flex;
     gap: 2%;
-    p {
+    .desc_wrap {
       text-align: center;
       padding: 10px 0;
+
+      span {
+        background-color: #fff7cb;
+        padding: 3px;
+      }
+    }
+
+    img {
+      width: 350px;
     }
   }
   .desc {

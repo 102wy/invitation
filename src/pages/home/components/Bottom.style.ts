@@ -5,5 +5,7 @@ export const Wrap = styled.div`
     padding: 40px;
     text-align: center;
     font-size: 12px;
+
+    padding-bottom: 100px;
   }
 `;
